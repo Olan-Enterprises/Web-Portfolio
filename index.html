@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="index.css">
+        <script defer src="introTypeScript.js"></script>
         <title>Document</title>
     </head>
     <body>
@@ -14,47 +15,98 @@
                         <span>Portfolio</span>
                         <span>About Me</span>
                     </li>
-                    <li>Olan Enterprises</li>
-                    <li><button>Contact Me</button></li>
+                    <li>
+                        <div class="logo">
+                            <span>Olan Enterprises</span>
+                        </div>
+                    </li>
+                    <li>
+                        <button>Contact Me</button>
+                    </li>
                 </ul>
             </nav>
         </header>
 
-        <div class="intro">
-            <div class="introLeft">
-                <div class="introStatement">
-                    <div>
-                        <span>My name</span>
-                        <span>is <strong>Ruwayne</strong></span>
+        <section id="section1">
+            <div class="intro">
+                <div class="introLeft">
+                    <div class="introStatement">
+                        <div>
+                            <span>My name</span>
+                            <span>is <strong>Ruwayne</strong></span>
+                            <p>I am <span class="auto-type"></span></p>
+                        </div>
+
+                        <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+                        <button>Hire Me</button>
                     </div>
-                    <p>I am a front-end web developer</p>
-                    <button>Hire Me</button>
                 </div>
         
-                <div class="languages">
-                    <span>HTML</span>
-                    <span>JavaScript</span>
-                    <span>CSS</span>
-                    <span>Python</span>
+                <div class="introRight">
+                    <img src="">
                 </div>
             </div>
     
-            <div class="introRight">
-                <img src="">
-            </div>
-        </div>
-        
-        <div class="projects">
-            <h1>Latest Projects</h1>
             <div>
-                <img src="">
-                <img src="">
-                <img src="">
+                <div class="slider" style="--width: 100px; --height: 40px; --quantity: 5;">
+                    <div class="list">
+                        <div class="Item" style="--position: 1"><span>HTML</span></div>
+                        <div class="Item" style="--position: 2"><span>JavaScript</span></div>
+                        <div class="Item" style="--position: 3"><span>CSS</span></div>
+                        <div class="Item" style="--position: 4"><span>Python</span></div>
+                        <div class="Item" style="--position: 5"><span>JSON</span></div>
+                    </div>
+                </div>
+        
+                <div class="slider1" style="--width: 240px; --height: 40px; --quantity: 6;">
+                    <div class="list">
+                        <div class="Item" style="--position: 1"><span>Front-end web developer •</span></div>
+                        <div class="Item" style="--position: 2"><span>I am a Programmer •</span></div>
+                        <div class="Item" style="--position: 3"><span>Based in Johannesbrug, Gauteng •</span></div>
+                        <div class="Item" style="--position: 4"><span>Open for work •</span></div>
+                        <div class="Item" style="--position: 5"><span>3 completed projects •</span></div>
+                        <div class="Item" style="--position: 6"><span>1+ years of experience •</span></div>
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
+
+        <section id="section2">
+            <div class="projects">
+                <h1>Latest Projects</h1>
+                <div class="latestProjects">
+                    <a href="https://lgenterprise.cc/" target="_blank"><div><img src="Images/LG Enterpise Logo.png"></div></a>
+                    <a href="https://humblefrib.github.io/New-Hair-Salon-Website/" target="_blank"><div><img src="Images/Salon Urembo Logo.png"></div></a>
+                </div>
+            </div>
+        </section>
+
+        <section id="section3">
+            <h1>Get In Touch</h1>
+            
+        </section>
     </body>
 
     <footer>
-        
+        <div class="footer1">
+            <div>
+                <h1>OLAN ENTERPRISES</h1>
+            </div>
+            <div>
+                <h2>Navigate</h2>
+                <li>Home</li>
+                <li>Contact</li>
+                <li>Email</li>
+            </div>
+            <div>
+                <h2>Details</h2>
+                <li>+27 67 275 0300</li>
+                <li>georgeruwayne6@gmail.com</li>
+            </div>
+        </div>
+        <div class="footer2">
+            <span>2024 Copyright © OLAN ENTERPRISES. All Rights Reserved.</span>
+        </div>
     </footer>
 </html>
