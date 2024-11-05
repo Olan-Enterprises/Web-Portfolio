@@ -1,24 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-    --section-margin: 70px;
-    --headerFontSize: 2em;
+    --sectionHeaderFontSize: 3em;
 }
 
 * {
-    padding: 0;
-    margin: 0;
     font-family: "Inter Tight", sans-serif;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: black;
 }
 
-html {
-    overflow-x: hidden;
-}
+section { margin-bottom: 70px; }
 
-nav {
-    width: 100%;
-    position: absolute;
-}
+h1 { font-size: 2em; }
+
+html { overflow-x: hidden; }
+
+nav { width: 100%; }
 
 nav ul {
     width: 100%;
@@ -75,9 +75,7 @@ nav ul li {
     font-size: 0.3em;
 }
 
-.introStatement button {
-    margin-top: 2em;
-}
+.introStatement button { margin-top: 2em; }
 
 .auto-type {
     font-size: 1.1em;
@@ -121,9 +119,7 @@ nav ul li {
     text-align: center;
 }
 
-.slider:hover .Item {
-    animation-play-state: paused!important; 
-}
+.slider:hover .Item { animation-play-state: paused!important; }
 
 .slider1 {
     width: 100%;
@@ -157,60 +153,331 @@ nav ul li {
     text-align: center;
 }
 
-.slider1:hover .Item {
-    animation-play-state: paused!important; 
+.slider1:hover .Item { animation-play-state: paused!important; }
+
+.sectionHeader {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 3em;
 }
 
-.projects {
-    margin-bottom: var(--section-margin);
+.sectionHeader span { transform: translateX(-140px); }
+
+.sectionHeader h1 { font-size: var(--sectionHeaderFontSize); }
+
+.sectionHeader div {
+    width: 100px;
+    height: 5px;
+    margin-bottom: 1.5em;
+    transform: translateX(120px);
+    background-color: black;
 }
 
-.projects h1 {
-    font-size: var(--headerFontSize);
-    margin: 5em 0 0 5em;
+.skillsCards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
 }
 
-.latestProjects {
+.skillsCard {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    transition: 0.3s transform ease-in-out, 0.3s box-shadow ease-in-out;
+}
+
+.skillsCard:hover {
+    transform: scale(105%);
+    box-shadow: 0 25px 40px rgba(0, 0, 0, 0.2);
+}
+
+.skillsCard .percent {
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+.skillsCard .percent svg {
+    width: 150px;
+    height: 150px;
+}
+
+.skillsCard .percent svg circle:nth-child(1) {
+    stroke-dashoffset: 0;
+    stroke: #f3f3f3;
+}
+
+.skillsCard .percent svg circle:nth-child(2) {
+    stroke-dashoffset: calc(440 - (440 * 87) / 100);
+    stroke: black;
+}
+
+.skillsCard .percent svg circle {
+    width: 150px;
+    height: 150px;
+    fill: none;
+    stroke-width: 5;
+    stroke: black;
+    transform: translate(5px, 5px);
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+}
+
+.skillsCard .percent .number {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #999;
+}
+
+.skillsCard .percent .number h2 { font-size: 2.5em; }
+
+.skillsCard .text {
+    padding: 10px 0 0;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #999;
+}
+
+.progress {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.progressBorder {
+    width: 1px;
+    height: 50px;
+    background-color: #999;
+}
+
+.sectionHeader-1 span { transform: translateX(-228px); }
+
+.servicesCards {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 70px;
+}
+
+.servicesCard {
+    width: 70%;
+    height: 200px;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    transition: 0.3s background-color ease, 0.3s transform ease;
+}
+
+.servicesCard:hover {
+    background-color: rgb(135, 135, 135);
+    transform: scale(105%);
+}
+
+.servicesCard h2, .servicesCard p { transition: 0.3s color ease; }
+
+.servicesCard:hover h2, .servicesCard:hover p { color: white; }
+
+.servicesCard:hover .svgContainer {
+    background-color: white;
+    transform: translateX(50px);
+    box-shadow: 0 -5px 30px rgba(0, 0, 0, 0.2);
+}
+
+.svgContainer svg path { transition: 0.3s stroke ease; }
+
+.servicesCard:hover .svgContainer svg path { stroke: rgb(84, 84, 84); }
+
+.svgContainer {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -30px;
+    border-radius: 50%;
+    background-color: rgb(135, 135, 135);
+    transition: 0.45s transform ease;
+}
+
+.completedProjects {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    margin-top: 3em;
 }
 
-.latestProjects div {
+.completedProjects a {
     width: 150px;
     height: 150px;
     display: flex;
     justify-content: center;
     align-items: center;
     border: 1px solid;
+    border-radius: 10px;
+    transition: 0.3s transform ease;
 }
 
-.projects img {
+.completedProjects a:hover {
+    transform: scale(105%);
+}
+
+.completedProjects img { width: 100%; }
+
+#section5 {
     width: 100%;
+    height: 250px;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: rgb(135, 135, 135);
+}
+
+#section5 h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+    color: white;
+}
+
+#section5 p {
+    padding-left: 1em;
+    color: white;
+}
+
+#section5 button {
+    width: 150px;
+    height: 50px;
+    margin-left: 1em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+#section5 button svg { fill: black; }
+
+#section6 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.contactForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2em;
+}
+
+.contactForm form {
+    width: 350px;
+    padding: 2em 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(245, 245, 245);
+    gap: 30px;
+}
+
+.contactForm form h3 {
+    margin-bottom: 10px;
+    font-size: 1em;
+}
+
+.contactForm form input {
+    width: 270px;
+    height: 40px;
+    padding: 0 10px;
+    border: 1px solid;
+    border-radius: 5px;
+}
+
+.contactForm form textarea {
+    width: 270px;
+    height: 150px;
+    padding: 10px;
+    border: 1px solid;
+    border-radius: 5px;
+}
+
+.contactForm form button {
+    width: 290px;
+    height: 40px;
+    border: 1px solid;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.personalInfoRow {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 1.5em 0;
+}
+
+.personalInfoRow p { color: rgb(170, 170, 170); }
+
+.personalInfoRowSvgContainer {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: rgb(170, 170, 170);
+}
+
+.personalInfoRowDec {
+    width: 100px;
+    height: 1px;
+    background-color: rgb(170, 170, 170);
 }
 
 footer {
     width: 100%;
     min-height: 200px;
+    padding-top: 40px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     border-top: 1px solid;
-    padding-top: 40px;
 }
 
 .footer1 {
     width: 100%;
+    margin-bottom: 1em;
     display: flex;
     justify-content: space-evenly;
-    margin-bottom: 1em;
 }
 
-.footer1 h1 {
-    font-size: 1.5em;
-}
+.footer1 h1 { font-size: 1.5em; }
 
 .footer1 h2 {
     margin-bottom: 30px;
@@ -249,25 +516,19 @@ footer {
 }
 
 @media(width < 500px) {
-    .introStatement div {
-        font-size: 1.8em;
-    }
+    .introStatement div { font-size: 1.8em; }
 
     .introRight img {
         width: 150px;
         height: 150px;
     }
 
-    .languages {
-        margin: 8em 0 0 1em;
-    }
+    .languages { margin: 8em 0 0 1em; }
 
     .languages span {
         font-size: 0.7em;
         padding: 7px;
     }
 
-    .projects h1 {
-        margin: 5em 0 0 1em;
-    }
+    .projects h1 { margin: 5em 0 0 1em; }
 }
