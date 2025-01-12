@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="indexDark.css">
+        <script defer src="introTypeScript.js"></script>
+        <script defer src="counters.js"></script>
+        <script defer src="servicesContactButton.js"></script>
+        <script defer src="navTime.js"></script>
+        <title>Ruwayne George Front-End Website Developer | Main Page</title>
+    </head>
+    <body>
+        <header id="section0">
+            <nav>
+                <div class="nav-1">
+                    <div class="logo">
+                        <a href="indexDark.html"><span>OLAN ENTERPRISES</span></a>
+                    </div>
+                </div>
+                <div class="nav-2">
+                    <div id="lightModeButton"  title="Toggle light mode">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="35px" viewBox="0 -960 960 960" width="35px" fill="#e6e6e6"><path d="M280-240q-100 0-170-70T40-480q0-100 70-170t170-70h400q100 0 170 70t70 170q0 100-70 170t-170 70H280Zm0-80h400q66 0 113-47t47-113q0-66-47-113t-113-47H280q-66 0-113 47t-47 113q0 66 47 113t113 47Zm400-40q50 0 85-35t35-85q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 50 35 85t85 35ZM480-480Z"/></svg>
+                    </div>
+                    <div>
+                        <a href="#section6"><button>Contact Me</button></a>
+                    </div>
+                    <div>
+                        <h2 id="currentTime">...</h2>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <script>
+            document.getElementById("lightModeButton").addEventListener("click", function () {
+                document.body.classList.add("transition");
+
+                setTimeout(() => {
+                    window.location.href = "index.html";
+                }, 600);
+            });
+        </script>
+        <section id="section1">
+            <div class="intro">
+                <div class="introLeft">
+                    <div class="introStatement">
+                        <div>
+                            <span>My name</span>
+                            <span>is <strong>Ruwayne</strong></span>
+                            <p>I am <span class="auto-type"></span></p>
+                        </div>
+                        <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+                        <a href="#section6">Hire Me</a>
+                    </div>
+                </div>
+                <div class="introRight">
+                    <h2>Welcome To</h2>
+                    <h1>OLAN ENTERPRISES</h1>
+                </div>
+            </div>
+            <div>
+                <div class="slider" style="--width: 100px; --height: 40px; --quantity: 5;">
+                    <div class="list">
+                        <div class="Item" style="--position: 1"><span>HTML</span></div>
+                        <div class="Item" style="--position: 2"><span>JavaScript</span></div>
+                        <div class="Item" style="--position: 3"><span>CSS</span></div>
+                        <div class="Item" style="--position: 4"><span>Python</span></div>
+                        <div class="Item" style="--position: 5"><span>JSON</span></div>
+                    </div>
+                </div>
+                <div class="slider1" style="--width: 240px; --height: 40px; --quantity: 8;">
+                    <div class="list">
+                        <div class="Item" style="--position: 1"><span>Front-End Web Developer •</span></div>
+                        <div class="Item" style="--position: 2"><span>Logo / Icon Designer •</span></span></div>
+                        <div class="Item" style="--position: 3"><span>Computer Science Major •</span></div>
+                        <div class="Item" style="--position: 4"><span>Based In Johannesbrug, Gauteng •</span></div>
+                        <div class="Item" style="--position: 5"><span>Open For Work •</span></div>
+                        <div class="Item" style="--position: 6"><span>4 Completed Projects •</span></div>
+                        <div class="Item" style="--position: 7"><span>2+ Years Of Experience •</span></div>
+                        <div class="Item" style="--position: 8"><span>Banner Designer •</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="section2">
+            <div class="sectionHeader">
+                <span>SKILLS</span>
+                <h1>SEE MY <strong>SKILLS</strong></h1>
+                <div></div>
+                <p>Have a look at the list of my extensive range of skills and talents I have acquired over the years</p>
+            </div>
+            <div class="skillsCards">
+                <div class="skillsCard">
+                    <h2>HTML</h2>
+                    <div class="percent">
+                        <svg>
+                            <circle cx="70" cy="70" r="70"></circle>
+                            <circle cx="70" cy="70" r="70"></circle>
+                        </svg>
+                        <div class="number">
+                            <h2><span data-count="87">0</span>%</h2>
+                        </div>
+                    </div>
+                    <h2 class="text">Progress</h2>
+                    <div class="progress">
+                        <div>
+                            <h3><span data-count="5">0</span>%</h3>
+                            <p>Last Week</p>
+                        </div>
+                        <div class="progressBorder"></div>
+                        <div>
+                            <h3><span data-count="15">0</span>%</h3>
+                            <p>Last Month</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="skillsCard">
+                    <h2>CSS</h2>
+                    <div class="percent">
+                        <svg>
+                            <circle cx="70" cy="70" r="70"></circle>
+                            <circle cx="70" cy="70" r="70"></circle>
+                        </svg>
+                        <div class="number">
+                            <h2><span data-count="92">0</span>%</h2>
+                        </div>
+                    </div>
+                    <h2 class="text">Progress</h2>
+                    <div class="progress">
+                        <div>
+                            <h3><span data-count="2">0</span>%</h3>
+                            <p>Last Week</p>
+                        </div>
+                        <div class="progressBorder"></div>
+                        <div>
+                            <h3><span data-count="30">0</span>%</h3>
+                            <p>Last Month</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="skillsCard">
+                    <h2>Python</h2>
+                    <div class="percent">
+                        <svg>
+                            <circle cx="70" cy="70" r="70"></circle>
+                            <circle cx="70" cy="70" r="70"></circle>
+                        </svg>
+                        <div class="number">
+                            <h2><span data-count="71">0</span>%</h2>
+                        </div>
+                    </div>
+                    <h2 class="text">Progress</h2>
+                    <div class="progress">
+                        <div>
+                            <h3><span data-count="7">0</span>%</h3>
+                            <p>Last Week</p>
+                        </div>
+                        <div class="progressBorder"></div>
+                        <div>
+                            <h3><span data-count="17">0</span>%</h3>
+                            <p>Last Month</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="skillsCard">
+                    <h2>JavaScript</h2>
+                    <div class="percent">
+                        <svg>
+                            <circle cx="70" cy="70" r="70"></circle>
+                            <circle cx="70" cy="70" r="70"></circle>
+                        </svg>
+                        <div class="number">
+                            <h2><span data-count="69">0</span>%</h2>
+                        </div>
+                    </div>
+                    <h2 class="text">Progress</h2>
+                    <div class="progress">
+                        <div>
+                            <h3><span data-count="9">0</span>%</h3>
+                            <p>Last Week</p>
+                        </div>
+                        <div class="progressBorder"></div>
+                        <div>
+                            <h3><span data-count="12">0</span>%</h3>
+                            <p>Last Month</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="section3">
+            <div class="sectionHeader sectionHeader-1">
+                <span>SERVICES</span>
+                <h1>BROWSE THROUGH MY <strong>SERVICES</strong></h1>
+                <div></div>
+                <p>I offer a wide variety of services. Go on and have a look!</p>
+            </div>
+            <div class="servicesCards">
+                <div class="servicesCard">
+                    <div class="svgContainer">
+                        <svg width="800px" height="800px" viewBox="0 0 24 24" fill="#272727" xmlns="http://www.w3.org/2000/svg">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                            <g id="SVGRepo_iconCarrier"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.83824 18.4467C10.0103 18.7692 10.1826 19.0598 10.3473 19.3173C8.59745 18.9238 7.07906 17.9187 6.02838 16.5383C6.72181 16.1478 7.60995 15.743 8.67766 15.4468C8.98112 16.637 9.40924 17.6423 9.83824 18.4467ZM11.1618 17.7408C10.7891 17.0421 10.4156 16.1695 10.1465 15.1356C10.7258 15.0496 11.3442 15 12.0001 15C12.6559 15 13.2743 15.0496 13.8535 15.1355C13.5844 16.1695 13.2109 17.0421 12.8382 17.7408C12.5394 18.3011 12.2417 18.7484 12 19.0757C11.7583 18.7484 11.4606 18.3011 11.1618 17.7408ZM9.75 12C9.75 12.5841 9.7893 13.1385 9.8586 13.6619C10.5269 13.5594 11.2414 13.5 12.0001 13.5C12.7587 13.5 13.4732 13.5593 14.1414 13.6619C14.2107 13.1384 14.25 12.5841 14.25 12C14.25 11.4159 14.2107 10.8616 14.1414 10.3381C13.4732 10.4406 12.7587 10.5 12.0001 10.5C11.2414 10.5 10.5269 10.4406 9.8586 10.3381C9.7893 10.8615 9.75 11.4159 9.75 12ZM8.38688 10.0288C8.29977 10.6478 8.25 11.3054 8.25 12C8.25 12.6946 8.29977 13.3522 8.38688 13.9712C7.11338 14.3131 6.05882 14.7952 5.24324 15.2591C4.76698 14.2736 4.5 13.168 4.5 12C4.5 10.832 4.76698 9.72644 5.24323 8.74088C6.05872 9.20472 7.1133 9.68686 8.38688 10.0288ZM10.1465 8.86445C10.7258 8.95042 11.3442 9 12.0001 9C12.6559 9 13.2743 8.95043 13.8535 8.86447C13.5844 7.83055 13.2109 6.95793 12.8382 6.2592C12.5394 5.69894 12.2417 5.25156 12 4.92432C11.7583 5.25156 11.4606 5.69894 11.1618 6.25918C10.7891 6.95791 10.4156 7.83053 10.1465 8.86445ZM15.6131 10.0289C15.7002 10.6479 15.75 11.3055 15.75 12C15.75 12.6946 15.7002 13.3521 15.6131 13.9711C16.8866 14.3131 17.9412 14.7952 18.7568 15.2591C19.233 14.2735 19.5 13.1679 19.5 12C19.5 10.8321 19.233 9.72647 18.7568 8.74093C17.9413 9.20477 16.8867 9.6869 15.6131 10.0289ZM17.9716 7.46178C17.2781 7.85231 16.39 8.25705 15.3224 8.55328C15.0189 7.36304 14.5908 6.35769 14.1618 5.55332C13.9897 5.23077 13.8174 4.94025 13.6527 4.6827C15.4026 5.07623 16.921 6.08136 17.9716 7.46178ZM8.67765 8.55325C7.61001 8.25701 6.7219 7.85227 6.02839 7.46173C7.07906 6.08134 8.59745 5.07623 10.3472 4.6827C10.1826 4.94025 10.0103 5.23076 9.83823 5.5533C9.40924 6.35767 8.98112 7.36301 8.67765 8.55325ZM15.3224 15.4467C15.0189 16.637 14.5908 17.6423 14.1618 18.4467C13.9897 18.7692 13.8174 19.0598 13.6527 19.3173C15.4026 18.9238 16.921 17.9186 17.9717 16.5382C17.2782 16.1477 16.3901 15.743 15.3224 15.4467ZM12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z" fill="#272727"/> </g>
+                        </svg>
+                    </div>
+                    <h2>Web Development</h2>
+                    <p>I prioritise robust functionality, smooth performance, great optimisation and professionalism to provide you with a website that not only looks great but performs exceptionally.</p>
+                    <div class="servicesCard-1">
+                        <ul>
+                            <li>Custom-made websites</li>
+                            <li>Landing pages</li>
+                            <li>Front-end development</li>
+                            <li>Cross-platform compatibility</li>
+                        </ul>
+                        <a id="contact1" href="#section6">Contact <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="m600-200-57-56 184-184H80v-80h647L544-704l56-56 280 280-280 280Z"/></svg></a>
+                    </div>
+                </div>
+                <div class="servicesCard">
+                    <div class="svgContainer">
+                        <svg width="80px" height="80px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                            <g id="SVGRepo_iconCarrier"> <path d="M12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2Z" stroke="#272727" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/> <path d="M8 21.1679V14L12 7L16 14V21.1679" stroke="#272727" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/> <path d="M8 14C8 14 9.12676 15 10 15C10.8732 15 12 14 12 14C12 14 13.1268 15 14 15C14.8732 15 16 14 16 14" stroke="#272727" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></g>
+                        </svg>
+                    </div>
+                    <h2>Icon / Logo Design</h2>
+                    <p>I create professional-looking layouts and logos to bring out your brand's identity, working closely with clients to understand their vision and to appeal to their customers.</p>
+                    <div class="servicesCard-1">
+                        <ul>
+                            <li>Custom website templates</li>
+                            <li>Logo design</li>
+                            <li>Animations, transitions and hover effects</li>
+                            <li>Typography</li>
+                            <li>Website remastering</li>
+                        </ul>
+                        <a id="contact2" href="#section6">Contact <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="m600-200-57-56 184-184H80v-80h647L544-704l56-56 280 280-280 280Z"/></svg></a>
+                    </div>
+                </div>
+                <div class="servicesCard">
+                    <div class="svgContainer svgContainerLast">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 -960 960 960" width="50px" fill="#272727"><path d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q146 0 255.5 91.5T872-559h-82q-19-73-68.5-130.5T600-776v16q0 33-23.5 56.5T520-680h-80v80q0 17-11.5 28.5T400-560h-80v80h80v120h-40L168-552q-3 18-5.5 36t-2.5 36q0 131 92 225t228 95v80Zm364-20L716-228q-21 12-45 20t-51 8q-75 0-127.5-52.5T440-380q0-75 52.5-127.5T620-560q75 0 127.5 52.5T800-380q0 27-8 51t-20 45l128 128-56 56ZM620-280q42 0 71-29t29-71q0-42-29-71t-71-29q-42 0-71 29t-29 71q0 42 29 71t71 29Z"/></svg>
+                    </div>
+                    <h2>Digital Marketing and SEO</h2>
+                    <p>I help you establish a strong online presence by leveraging the power of digital marketing. From crafting engaging campaigns to optimizing your site for search engines, I focus on driving traffic and increasing your reach.</p>
+                    <div class="servicesCard-1">
+                        <ul>
+                            <li>Search Engine Optimization (SEO)</li>
+                            <li>Analytics and Performance Tracking</li>
+                            <li>Content Marketing</li>
+                        </ul>
+                        <a id="contact3" href="#section6">Contact <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="m600-200-57-56 184-184H80v-80h647L544-704l56-56 280 280-280 280Z"/></svg></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="section5">
+            <div class="section5Border"></div>
+            <div>
+                <h2>Got a project in mind?</h2>
+                <p>Get in contact with me via email or make a call and let's make it happen!</p>
+            </div>
+            <div><a href="#section6">Contact Me<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e6e6e6"><path d="M798-120q-125 0-247-54.5T329-329Q229-429 174.5-551T120-798q0-18 12-30t30-12h162q14 0 25 9.5t13 22.5l26 140q2 16-1 27t-11 19l-97 98q20 37 47.5 71.5T387-386q31 31 65 57.5t72 48.5l94-94q9-9 23.5-13.5T670-390l138 28q14 4 23 14.5t9 23.5v162q0 18-12 30t-30 12ZM241-600l66-66-17-94h-89q5 41 14 81t26 79Zm358 358q39 17 79.5 27t81.5 13v-88l-94-19-67 67ZM241-600Zm358 358Z"/></svg></a></div>
+        </section>
+        <section id="section4">
+            <div class="sectionHeader">
+                <span>PROJECTS</span>
+                <h1>MY COMPLETED <strong>PROJECTS</strong></h1>
+                <div></div>
+                <p>Take a look at my recent projects</p>
+            </div>
+            <div class="completedProjects">
+                <a href="https://lgenterprise.cc/" target="_blank">
+                    <img src="Images/LG Enterpise Logo.png">
+                </a>
+                <a href="https://humblefrib.github.io/Salon-Urembo-Website/" target="_blank">
+                    <img src="Images/Salon Urembo Logo.png">
+                </a>
+                <a href="https://humblefrib.github.io/Tubatse-Energy/" target="_blank">
+                    <img src="Images/Tubatse Energy Logo.png">
+                </a>
+            </div>
+        </section>
+        <section id="section6">
+            <div class="sectionHeader">
+                <span>CONTACT ME</span>
+                <h1>LET'S WORK <strong>TOGETHER</strong></h1>
+                <div></div>
+                <p>Have an idea on a project? Get in touch and make it a reality</p>
+            </div>
+            <div class="contactForm">
+                <form action="https://formspree.io/f/mjkkjnad" method="POST">
+                    <input type="hidden" name="_subject" value="New Mail">
+                    <div>
+                        <h3>Name</h3>
+                        <input type="text" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div>
+                        <h3>Email</h3>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div>
+                        <h3>Message</h3>
+                        <textarea id="textarea" name="message" placeholder="Your Message (Optional)"></textarea>
+                    </div>
+                    <div>
+                        <button type="submit">Submit Request</button>
+                    </div>
+                </form>
+            </div>
+            <div class="personalInfoContainer">
+                <div class="personalInfoRow">
+                    <div class="personalInfoRowSvgContainer"><div class="personalInfoRowSvgContainerBorder"><svg xmlns="http://www.w3.org/2000/svg" height="35px" viewBox="0 -960 960 960" width="35px" fill="white"><path d="m600-120-240-84-186 72q-20 8-37-4.5T120-170v-560q0-13 7.5-23t20.5-15l212-72 240 84 186-72q20-8 37 4.5t17 33.5v560q0 13-7.5 23T812-192l-212 72Zm-40-98v-468l-160-56v468l160 56Zm80 0 120-40v-474l-120 46v468Zm-440-10 120-46v-468l-120 40v474Zm440-458v468-468Zm-320-56v468-468Z"/></svg></div></div>
+                    <div>
+                        <h3>Address:</h3>
+                        <p> Graceland Estate Unit 211, Elspark Germiston, Gauteng</p>
+                    </div>
+                </div>
+                <div class="personalInfoRowDec"></div>
+                <div class="personalInfoRow">
+                    <div class="personalInfoRowSvgContainer"><div class="personalInfoRowSvgContainerBorder"><svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="white"><path d="M798-120q-125 0-247-54.5T329-329Q229-429 174.5-551T120-798q0-18 12-30t30-12h162q14 0 25 9.5t13 22.5l26 140q2 16-1 27t-11 19l-97 98q20 37 47.5 71.5T387-386q31 31 65 57.5t72 48.5l94-94q9-9 23.5-13.5T670-390l138 28q14 4 23 14.5t9 23.5v162q0 18-12 30t-30 12ZM241-600l66-66-17-94h-89q5 41 14 81t26 79Zm358 358q39 17 79.5 27t81.5 13v-88l-94-19-67 67ZM241-600Zm358 358Z"/></svg></div></div>
+                    <div>
+                        <h3>Phone Number:</h3>
+                        <p>+27 67 275 0300</p>
+                    </div>
+                </div>
+                <div class="personalInfoRowDec"></div>
+                <div class="personalInfoRow">
+                    <div class="personalInfoRowSvgContainer"><div class="personalInfoRowSvgContainerBorder"><svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="white"><path d="M120-160v-640l760 320-760 320Zm80-120 474-200-474-200v140l240 60-240 60v140Zm0 0v-400 400Z"/></svg></div></div>
+                    <div>
+                        <h3>Email Address:</h3>
+                        <p>georgeruwayne6@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+    <footer>
+        <div class="footerBorderTop"></div>
+        <div class="footer1">
+            <div>
+                <h1>OLAN ENTERPRISES</h1>
+            </div>
+            <div>
+                <h2>Navigate</h2>
+                <a href="#section0"><li>Home</li></a>
+                <a href="#section3"><li>Services</li></a>
+                <a href="#section6"><li>Contact</li></a>
+            </div>
+            <div>
+                <h2>Contact Details</h2>
+                <li>+27 67 275 0300</li>
+                <li>georgeruwayne6@gmail.com</li>
+            </div>
+        </div>
+        <div class="footer2">
+            <span>2025 Copyright © OLAN ENTERPRISES. All Rights Reserved.</span>
+        </div>
+    </footer>
+    <div class="fixedUiContainer">
+        <a href="#section0" class="backToTop" title="Back to top">
+            <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#e6e6e6"><path d="M440-160v-487L216-423l-56-57 320-320 320 320-56 57-224-224v487h-80Z"/></svg>
+        </a>
+        <div class="whatsApp" title="Contact on whatsApp" onclick="OpenWhatsApp()">
+            <svg width="35px" height="35px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M3.50002 12C3.50002 7.30558 7.3056 3.5 12 3.5C16.6944 3.5 20.5 7.30558 20.5 12C20.5 16.6944 16.6944 20.5 12 20.5C10.3278 20.5 8.77127 20.0182 7.45798 19.1861C7.21357 19.0313 6.91408 18.9899 6.63684 19.0726L3.75769 19.9319L4.84173 17.3953C4.96986 17.0955 4.94379 16.7521 4.77187 16.4751C3.9657 15.176 3.50002 13.6439 3.50002 12ZM12 1.5C6.20103 1.5 1.50002 6.20101 1.50002 12C1.50002 13.8381 1.97316 15.5683 2.80465 17.0727L1.08047 21.107C0.928048 21.4637 0.99561 21.8763 1.25382 22.1657C1.51203 22.4552 1.91432 22.5692 2.28599 22.4582L6.78541 21.1155C8.32245 21.9965 10.1037 22.5 12 22.5C17.799 22.5 22.5 17.799 22.5 12C22.5 6.20101 17.799 1.5 12 1.5ZM14.2925 14.1824L12.9783 15.1081C12.3628 14.7575 11.6823 14.2681 10.9997 13.5855C10.2901 12.8759 9.76402 12.1433 9.37612 11.4713L10.2113 10.7624C10.5697 10.4582 10.6678 9.94533 10.447 9.53028L9.38284 7.53028C9.23954 7.26097 8.98116 7.0718 8.68115 7.01654C8.38113 6.96129 8.07231 7.046 7.84247 7.24659L7.52696 7.52195C6.76823 8.18414 6.3195 9.2723 6.69141 10.3741C7.07698 11.5163 7.89983 13.314 9.58552 14.9997C11.3991 16.8133 13.2413 17.5275 14.3186 17.8049C15.1866 18.0283 16.008 17.7288 16.5868 17.2572L17.1783 16.7752C17.4313 16.5691 17.5678 16.2524 17.544 15.9269C17.5201 15.6014 17.3389 15.308 17.0585 15.1409L15.3802 14.1409C15.0412 13.939 14.6152 13.9552 14.2925 14.1824Z" fill="#e6e6e6"/>
+            </svg>
+        </div>
+    </div>
+    <script>
+        function OpenWhatsApp() {
+            const phoneNumber = "+27672750300";
+            const message = "Hi, I'd like to learn more about your services.";
+            const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+            window.open(url, "_blank");
+        }
+      </script>
+      <div class="transition-overlay"></div>
+</html>
