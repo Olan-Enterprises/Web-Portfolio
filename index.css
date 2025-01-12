@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-    --sectionHeaderFontSize: 3em;
+    --mainColour: black;
+    --sectionHeaderFontSize: 3.5em;
+    --textColour: rgb(60, 60, 60);
 }
 
 * {
@@ -9,42 +11,99 @@
     margin: 0;
     padding: 0;
     text-decoration: none;
+    color: var(--mainColour);
+}
+
+section {
+    margin-bottom: 70px;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+html {
+    position: relative;
+    scroll-padding: 5em;
+    scroll-behavior: smooth;
+    /* overflow: hidden; */
+}
+
+nav {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-1 {
+    margin-left: 1em;
+}
+
+.nav-1 span {
+    font-family: sans-serif;
+    font-size: 1.8em;
+    color: black;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1px;
+}
+
+.nav-2 {
+    width: 260px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.nav-2 button {
+    width: 120px;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 7px;
+    font-size: 1em;
+    background-color: black;
+    color: white;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-2 button:hover {
+    background-color: white;
     color: black;
 }
 
-section { margin-bottom: 70px; }
-
-h1 { font-size: 2em; }
-
-html { overflow-x: hidden; }
-
-nav { width: 100%; }
-
-nav ul {
-    width: 100%;
-    height: 50px;
-    display: grid;
-    grid-template-columns: 2fr 1fr 2fr;
-    align-items: center;
-    list-style: none;
+#darkModeButton {
+    cursor: pointer;
 }
 
-nav ul li {
+#currentTime {
+    width: 50px;
+    height: 100%;
     display: flex;
-    justify-content: space-evenly;
-    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+    font-weight: 400;
 }
 
 #section1 {
     height: 100vh;
+    margin-top: 3.1em;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .intro {
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
 }
 
 .introLeft {
@@ -54,12 +113,11 @@ nav ul li {
 }
 
 .introStatement {
-    height: 500px;
+    height: 460px;
+    padding: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 10px;
-    margin: 5em 0 0 0;
     border: 1px solid;
     border-radius: 10px;
 }
@@ -75,25 +133,51 @@ nav ul li {
     font-size: 0.3em;
 }
 
-.introStatement button { margin-top: 2em; }
+.introStatement a {
+    height: 40px;
+    margin-top: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+    border: 1px solid;
+    border-radius: 5px;
+    background-color: white;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border 0.3s ease-in-out;
+}
+
+.introStatement a:hover {
+    border: 1px solid black;
+    background-color: black;
+    color: white;
+}
 
 .auto-type {
     font-size: 1.1em;
     font-weight: 700;
 }
 
-.introRight img {
-    width: 200px;
-    height: 200px;
-    margin: 5em 0 0 0;
+.introRight h2 {
+    font-size: 3em;
+    font-weight: 100;
+}
+
+.introRight h1 {
+    font-family: sans-serif;
+    font-size: 2.5em;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: black;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1.2px;
 }
 
 .slider {
     width: 100%;
     height: var(--height);
-    border: 1px solid black;
+    background-color: black;
     overflow: hidden;
-    mask-image: linear-gradient(to right, transparent, black 10% 90%, transparent);
 }
 
 .slider .list {
@@ -117,17 +201,17 @@ nav ul li {
 .slider .list .Item span {
     width: 100%;
     text-align: center;
+    color: white;
 }
 
 .slider:hover .Item { animation-play-state: paused!important; }
 
 .slider1 {
     width: 100%;
-    border: 1px solid black;
     height: var(--height);
+    margin: 30px 0 0 0;
+    background-color: black;
     overflow: hidden;
-    mask-image: linear-gradient(to right, transparent, black 10% 90%, transparent);
-    margin: 30px 0 5px 0;
 }
 
 .slider1 .list {
@@ -151,29 +235,50 @@ nav ul li {
 .slider1 .list .Item span {
     width: 100%;
     text-align: center;
+    color: white;
 }
 
-.slider1:hover .Item { animation-play-state: paused!important; }
+.slider1:hover .Item {
+    animation-play-state: paused!important;
+}
 
 .sectionHeader {
     width: 100%;
+    margin-bottom: 3em;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin-bottom: 3em;
 }
 
-.sectionHeader span { transform: translateX(-140px); }
+.sectionHeader span {
+    font-weight: 500;
+    transform: translateX(-140px);
+}
 
-.sectionHeader h1 { font-size: var(--sectionHeaderFontSize); }
+.sectionHeader h1 {
+    padding: 0 0.5em;
+    font-size: var(--sectionHeaderFontSize);
+}
+
+.sectionHeader strong {
+    font-family: sans-serif;
+    color: black;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1.5px;
+}
+
+.sectionHeader p {
+    color: var(--textColour);
+}
 
 .sectionHeader div {
     width: 100px;
     height: 5px;
     margin-bottom: 1.5em;
+    border: 2px solid;
+    border-radius: 5px;
     transform: translateX(120px);
-    background-color: black;
 }
 
 .skillsCards {
@@ -184,13 +289,13 @@ nav ul li {
 }
 
 .skillsCard {
-    position: relative;
     width: 300px;
     height: 400px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    position: relative;
     border-radius: 10px;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
     transition: 0.3s transform ease-in-out, 0.3s box-shadow ease-in-out;
@@ -198,13 +303,13 @@ nav ul li {
 
 .skillsCard:hover {
     transform: scale(105%);
-    box-shadow: 0 25px 40px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 25px 40px rgba(0, 0, 0, 0.3);
 }
 
 .skillsCard .percent {
-    position: relative;
     width: 150px;
     height: 150px;
+    position: relative;
 }
 
 .skillsCard .percent svg {
@@ -219,7 +324,7 @@ nav ul li {
 
 .skillsCard .percent svg circle:nth-child(2) {
     stroke-dashoffset: calc(440 - (440 * 87) / 100);
-    stroke: black;
+    stroke: rgb(0, 172, 0);
 }
 
 .skillsCard .percent svg circle {
@@ -245,13 +350,15 @@ nav ul li {
     color: #999;
 }
 
-.skillsCard .percent .number h2 { font-size: 2.5em; }
+.skillsCard .percent .number h2 {
+    font-size: 2.5em;
+}
 
 .skillsCard .text {
     padding: 10px 0 0;
     font-weight: 700;
     letter-spacing: 1px;
-    color: #999;
+    color: black;
 }
 
 .progress {
@@ -264,7 +371,7 @@ nav ul li {
 .progressBorder {
     width: 1px;
     height: 50px;
-    background-color: #999;
+    background-color: black;
 }
 
 .sectionHeader-1 span { transform: translateX(-228px); }
@@ -282,33 +389,98 @@ nav ul li {
     height: 200px;
     padding: 20px;
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
     justify-content: space-evenly;
     position: relative;
     border-radius: 10px;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-    transition: 0.3s background-color ease, 0.3s transform ease;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease;
+}
+
+.servicesCard p {
+    font-size: 0.8em;
+    color: rgb(60, 60, 60);
+}
+
+.servicesCard li {
+    margin-left: 1em;
+    font-size: 0.8em;
+    color: var(--textColour);
+}
+
+.servicesCard a {
+    width: 120px;
+    height: 30px;
+    margin: 0 1em 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 1px solid var(--mainColour);
+    border-radius: 5px;
+    background-color: var(--mainColour);
+    color: white;
+    transition: background-color 0.3s ease, border 0.3s ease;
+}
+
+.servicesCard-1 svg {
+    fill: white;
+    transform: rotate(305deg);
+    transition: transform 0.3s ease;
+}
+
+.servicesCard-1 a:hover svg {
+    transform: rotate(0deg);
+}
+
+.servicesCard-1 {
+    display: flex;
+    align-items: end;
 }
 
 .servicesCard:hover {
-    background-color: rgb(135, 135, 135);
+    background-color: rgb(23, 23, 23);
     transform: scale(105%);
 }
 
-.servicesCard h2, .servicesCard p { transition: 0.3s color ease; }
+.servicesCard h2, .servicesCard p {
+    transition: color 0.3s ease;
+}
 
-.servicesCard:hover h2, .servicesCard:hover p { color: white; }
+.servicesCard:hover h2, .servicesCard:hover p, .servicesCard:hover li {
+    color: white;
+}
+
+.servicesCard:hover a {
+    border: 1px solid white;
+    background-color: white;
+    color: var(--mainColour);
+}
+
+.servicesCard:hover .servicesCard-1 svg {
+    fill: var(--mainColour);
+}
 
 .servicesCard:hover .svgContainer {
     background-color: white;
-    transform: translateX(50px);
+    transform: translateX(10px);
     box-shadow: 0 -5px 30px rgba(0, 0, 0, 0.2);
 }
 
-.svgContainer svg path { transition: 0.3s stroke ease; }
+.svgContainer svg path {
+    transition: 0.3s stroke ease;
+}
 
-.servicesCard:hover .svgContainer svg path { stroke: rgb(84, 84, 84); }
+.svgContainerLast svg {
+    transition: fill 0.3s ease;
+}
+
+.servicesCard:hover .svgContainerLast svg {
+    fill: black;
+}
+
+.servicesCard:hover .svgContainer svg path {
+    stroke: var(--mainColour);
+}
 
 .svgContainer {
     width: 60px;
@@ -319,8 +491,9 @@ nav ul li {
     position: absolute;
     top: -30px;
     border-radius: 50%;
-    background-color: rgb(135, 135, 135);
-    transition: 0.45s transform ease;
+    background-color: var(--mainColour);
+    transform: translateX(100px);
+    transition: transform 0.45s ease, background-color 0.3s ease;
 }
 
 .completedProjects {
@@ -328,6 +501,7 @@ nav ul li {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    gap: 20px;
 }
 
 .completedProjects a {
@@ -342,45 +516,76 @@ nav ul li {
 }
 
 .completedProjects a:hover {
-    transform: scale(105%);
+    transform: scale(110%);
 }
 
-.completedProjects img { width: 100%; }
+.completedProjects img {
+    width: 90%;
+    object-fit: cover;
+}
 
 #section5 {
-    width: 100%;
+    width: 95%;
     height: 250px;
-    padding: 1em;
+    padding: 1em 0;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    background-color: rgb(135, 135, 135);
+    position: relative;
+    border-top-right-radius: 150px;
+    border-bottom-right-radius: 150px;
+    background-color: var(--mainColour);
+}
+
+.section5Border {
+    width: 100.5%;
+    height: 102.5%;
+    position: absolute;
+    top: -4.9px;
+    left: 0;
+    z-index: -999;
+    border: 2px solid;
+    border-left: none;
+    border-top-right-radius: 150px;
+    border-bottom-right-radius: 150px;
 }
 
 #section5 h2 {
     font-size: 2em;
     margin-bottom: 15px;
-    color: white;
-}
-
-#section5 p {
     padding-left: 1em;
     color: white;
 }
 
-#section5 button {
-    width: 150px;
-    height: 50px;
-    margin-left: 1em;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    border: none;
-    border-radius: 5px;
-    font-size: 1em;
+#section5 p {
+    padding-left: 3em;
+    color: white;
 }
 
-#section5 button svg { fill: black; }
+#section5 a {
+    width: 130px;
+    height: 46px;
+    margin-left: 3em;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border: none;
+    border-radius: 10px;
+    font-size: 1em;
+    font-weight: 500;
+    background-color: white;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+#section5 a:hover {
+    transform: scale(110%);
+}
+
+#section5 a svg {
+    fill: black;
+    transition: fill 0.3s ease-in-out;
+}
 
 #section6 {
     display: flex;
@@ -390,10 +595,10 @@ nav ul li {
 }
 
 .contactForm {
+    margin-bottom: 2em;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 2em;
 }
 
 .contactForm form {
@@ -402,62 +607,108 @@ nav ul li {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: rgb(245, 245, 245);
+    border-radius: 10px;
+    background-color: black;
     gap: 30px;
 }
 
 .contactForm form h3 {
-    margin-bottom: 10px;
+    width: max-content;
+    margin-left: 10px;
+    padding: 0 7px;
     font-size: 1em;
+    background-color: black;
+    color: white;
+    transform: translateY(10px);
 }
 
 .contactForm form input {
     width: 270px;
     height: 40px;
-    padding: 0 10px;
-    border: 1px solid;
+    padding: 0 15px;
+    border: 2px solid white;
     border-radius: 5px;
+    background-color: black;
+    color: white;
+    font-size: 0.8em;
+}
+
+.contactForm form input::placeholder {
+    color: rgb(169, 169, 169);
 }
 
 .contactForm form textarea {
     width: 270px;
     height: 150px;
-    padding: 10px;
-    border: 1px solid;
+    padding: 15px;
+    border: 2px solid;
     border-radius: 5px;
+    background-color: black;
+    color: white;
+    font-size: 0.8em;
+    resize: vertical;
+}
+
+.contactForm form textarea::placeholder {
+    color: rgb(169, 169, 169);
 }
 
 .contactForm form button {
     width: 290px;
     height: 40px;
-    border: 1px solid;
+    border: 2px solid;
     border-radius: 5px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    transition: border 0.3s ease-in-out, color 0.3s ease-in-out, background-color 0.3s ease-in-out, font-weight 0.3s ease;
+}
+
+.contactForm form button:hover {
+    border: 1px solid var(--mainColour);
+    font-weight: 450;
     background-color: white;
+    color: black;
 }
 
 .personalInfoRow {
+    margin: 1.5em;
     display: flex;
     align-items: center;
     gap: 10px;
-    margin: 1.5em 0;
 }
 
-.personalInfoRow p { color: rgb(170, 170, 170); }
+.personalInfoRow p {
+    font-size: 0.8em;
+    color: var(--textColour);
+}
 
 .personalInfoRowSvgContainer {
     width: 50px;
     height: 50px;
+    position: relative;
+    border-radius: 50%;
+    background-color: black;
+}
+
+.personalInfoRowSvgContainerBorder {
+    width: 55px;
+    height: 55px;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    border: 2px solid;
     border-radius: 50%;
-    background-color: rgb(170, 170, 170);
 }
 
 .personalInfoRowDec {
     width: 100px;
-    height: 1px;
-    background-color: rgb(170, 170, 170);
+    height: 3px;
+    border: 2px solid;
+    border-radius: 5px;
 }
 
 footer {
@@ -465,34 +716,121 @@ footer {
     min-height: 200px;
     padding-top: 40px;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     justify-content: space-between;
-    border-top: 1px solid;
+    position: relative;
+    background-color: black;
+}
+
+.footerBorderTop {
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    top: -5px;
+    left: 0;
+    background-color: black;
 }
 
 .footer1 {
     width: 100%;
     margin-bottom: 1em;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
 }
 
-.footer1 h1 { font-size: 1.5em; }
+.footer1 h1 {
+    font-family: sans-serif;
+    font-size: 1.5em;
+    letter-spacing: 2px;
+    color: white;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 0.7px;
+}
 
 .footer1 h2 {
     margin-bottom: 30px;
     font-size: 0.9em;
+    color: white;
 }
 
 .footer1 li {
     font-size: 0.7em;
     list-style: none;
+    color: white;
 }
 
 .footer2 span {
-    font-size: 0.6em;
+    margin: 0 1em 1em 0;
     display: flex;
     justify-content: flex-end;
+    font-size: 0.6em;
+    color: white;
+}
+
+.fixedUiContainer {
+    width: 60px;
+    height: 125px;
+    margin: 0 2em 1em 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    bottom: 10px;
+    right: 0;
+    z-index: 999;
+    gap: 10px;
+}
+
+.fixedUiContainer .backToTop, .whatsApp {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.9);
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.fixedUiContainer .backToTop:hover, .fixedUiContainer .whatsApp:hover {
+    border: 2px solid white;
+    background-color: black;
+    transform: scale(110%);
+}
+
+.fixedUiContainer .backToTop:hover svg {
+    fill: white;
+}
+
+.fixedUiContainer .whatsApp:hover path {
+    fill: rgb(0, 172, 0);
+}
+
+.transition-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #121212; /* Dark background for the overlay */
+    z-index: 9999;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.6s ease-in-out;
+}
+
+body.light-mode .transition-overlay {
+    background: #ffffff; /* Light background for the overlay */
+}
+
+/* Active class for transition */
+body.transition .transition-overlay {
+    transform: scaleX(1);
 }
 
 @keyframes autoRunLeft {
@@ -516,19 +854,311 @@ footer {
 }
 
 @media(width < 500px) {
-    .introStatement div { font-size: 1.8em; }
+    .nav-1 span {
+        font-size: 0.9em;
+        -webkit-text-stroke-width: 0.5px;
+    }
 
-    .introRight img {
+    .nav-2 {
+        width: 200px;
+        display: flex;
+    }
+
+    #darkModeButton svg {
+        width: 25px;
+        height: 25px;
+    }
+
+    .nav-2 button {
+        width: 80px;
+        height: 30px;
+        border: 1px solid black;
+        border-radius: 7px;
+        font-size: 0.7em;
+        background-color: black;
+        color: white;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    
+    #currentTime {
+        width: 55px;
+        height: 100%;
+        margin-right: 1em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.8em;
+        font-weight: 400;
+    }
+
+    .introStatement {
+        height: 388px;
+        margin: -6.8em 0;
+    }
+
+    .introStatement div {
+        font-size: 1.8em;
+    }
+
+    .introStatement a {
+        height: 30px;
+        font-size: 0.8em;
+    }
+
+    .slider1 {
+        margin-bottom: -10em;
+    }
+
+    .auto-type {
+        font-size: 1.35em;
+    }
+
+    .introRight h2 {
+        width: max-content;
+        font-size: 1.5em;
+        font-weight: 100;
+    }
+    
+    .introRight h1 {
         width: 150px;
+        font-size: 1.35em;
+        font-weight: 200;
+        letter-spacing: 1px;
+        -webkit-text-stroke-width: 0.7px;
+    }
+
+    #section2 {
+        margin-top: -4em;
+    }
+
+    .sectionHeader span {
+        font-size: 0.8em;
+        transform: translateX(-100px);
+    }
+    
+    .sectionHeader h1 {
+        font-size: 2em;
+    }
+    
+    .sectionHeader strong {
+        -webkit-text-stroke-width: 1px;
+    }
+    
+    .sectionHeader p {
+        padding: 0 1em;
+        font-size: 0.8em;
+        color: var(--textColour);
+    }
+
+    .sectionHeader div {
+        border: 1px solid;
+        transform: translateX(70px);
+    }
+
+    .skillsCards {
+        gap: 15px;
+    }
+
+    .skillsCard {
+        width: 170px;
+        height: 300px;
+        justify-content: space-evenly;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .skillsCard h2 {
+        font-size: 1em;
+    }
+
+    .skillsCard .percent .number h2 {
+        font-size: 2em;
+    }
+
+    .skillsCard .text {
+        font-size: 1em;
+    }
+
+    .progress span {
+        font-size: 1.4em;
+    }
+
+    .progress h3 {
+        font-size: 0.8em;
+    }
+
+    .progress p {
+        font-size: 0.8em;
+        font-weight: 300;
+    }
+
+    .progressBorder {
+        height: 35px;
+    }
+
+    .servicesCard {
+        width: 80%;
+        height: 250px;
+    }
+
+    .servicesCard h2 {
+        font-size: 1.2em;
+    }
+
+    .servicesCard li {
+        width: 110px;
+        font-size: 0.7em;
+    }
+
+    .servicesCard a {
+        width: 100px;
+        height: 25px;
+        font-size: 0.8em;
+    }
+
+    .servicesCard a svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .servicesCard-1 {
+        flex-wrap: wrap;
+    }
+
+    #section5 {
         height: 150px;
     }
 
-    .languages { margin: 8em 0 0 1em; }
-
-    .languages span {
-        font-size: 0.7em;
-        padding: 7px;
+    #section5 h2 {
+        font-size: 1.4em;
+        margin-bottom: 15px;
+        padding-left: 1em;
+        color: white;
+    }
+    
+    #section5 p {
+        padding: 0 3em;
+        font-size: 0.8em;
+        color: white;
+    }
+    
+    #section5 a {
+        width: 110px;
+        height: 35px;
+        border-radius: 10px;
+        font-size: 0.8em;
     }
 
-    .projects h1 { margin: 5em 0 0 1em; }
+    #section5 a svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .completedProjects {
+        gap: 5px;
+    }
+    
+    .completedProjects a {
+        width: 100px;
+        height: 100px;
+    }
+
+    .contactForm form {
+        width: 290px;
+    }
+
+    .contactForm form h3 {
+        font-size: 0.8em;
+    }
+
+    .contactForm form input {
+        width: 210px;
+        height: 35px;
+        font-size: 0.7em;
+    }
+    
+    .contactForm form textarea {
+        width: 210px;
+        height: 120px;
+        font-size: 0.7em;
+    }
+
+    .contactForm form button {
+        width: 245px;
+        height: 35px;
+    }
+
+    .personalInfoRow h3 {
+        font-size: 1em;
+    }
+
+    .personalInfoRow p {
+        font-size: 0.7em;
+    }
+    
+    .personalInfoRowSvgContainer {
+        width: 46px;
+        height: 46px;
+        position: relative;
+        border-radius: 50%;
+        background-color: black;
+    }
+    
+    .personalInfoRowSvgContainerBorder {
+        width: 51px;
+        height: 51px;
+    }
+
+    .personalInfoRowDec {
+        width: 70px;
+        height: 2px;
+        margin-left: 0.5em;
+    }
+
+    .fixedUiContainer {
+        width: 50px;
+        height: 110px;
+        margin: 0 2em 0em 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        position: fixed;
+        bottom: 10px;
+        right: 0;
+        z-index: 999;
+        gap: 10px;
+    }
+
+    .fixedUiContainer svg {
+        width: 30px;
+        height: 30px;
+    }
+
+    .fixedUiContainer .backToTop, .whatsApp {
+        background-color: rgba(255, 255, 255, 1);
+    }
+
+    .footer1 h1 {
+        font-size: 0.8em;
+        letter-spacing: 0.5px;
+    }
+
+    .footer1 h2 {
+        margin-bottom: 20px;
+        font-size: 0.7em;
+        font-weight: 600;
+    }
+
+    .footer1 li {
+        font-size: 0.6em;
+    }
+    
+    .footer2 span {
+        margin-right: 2em;
+        display: flex;
+        justify-content: flex-end;
+        font-size: 0.5em;
+        font-weight: 300;
+        color: white;
+    }
 }
